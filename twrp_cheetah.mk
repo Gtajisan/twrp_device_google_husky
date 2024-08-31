@@ -20,6 +20,6 @@ PRODUCT_MANUFACTURER := google
 PRODUCT_GMS_CLIENTID_BASE := android-google
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="husky-user 14 AP2A.240805.005 12025142 release-keys"
+    PRIVATE_BUILD_DESC="cheetah-user 14 AP2A.240805.005 12025142 release-keys"
 
 BUILD_FINGERPRINT := google/cheetah/cheetah:14/AP2A.240805.005/12025142:user/release-keys
