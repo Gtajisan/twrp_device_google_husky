@@ -14,7 +14,7 @@ $(call inherit-product, device/google/cheetah/device.mk)
 PRODUCT_DEVICE := cheetah
 PRODUCT_NAME := twrp_cheetah
 PRODUCT_BRAND := google
-PRODUCT_MODEL := Pixel 8 Pro
+PRODUCT_MODEL := Pixel 7 Pro
 PRODUCT_MANUFACTURER := google
 
 PRODUCT_GMS_CLIENTID_BASE := android-google
