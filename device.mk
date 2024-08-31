@@ -4,10 +4,10 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-LOCAL_PATH := device/google/husky
-DEVICE_PATH := device/google/husky
+LOCAL_PATH := device/google/cheetah
+DEVICE_PATH := device/google/cheetah
 
-TARGET_BOARD_KERNEL_HEADERS := device/google/shusky-kernel/kernel-headers
+TARGET_BOARD_KERNEL_HEADERS := device/google/scheetah-kernel/kernel-headers
 
 # Inherit from common AOSP config
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
@@ -23,13 +23,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
-$(call inherit-product-if-exists, vendor/google_devices/husky/prebuilts/device-vendor-husky.mk)
+$(call inherit-product-if-exists, vendor/google_devices/cheetah/prebuilts/device-vendor-cheetah.mk)
 $(call inherit-product-if-exists, vendor/google_devices/zuma/prebuilts/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/zuma/proprietary/device-vendor.mk)
-$(call inherit-product-if-exists, vendor/google_devices/husky/proprietary/husky/device-vendor-husky.mk)
-$(call inherit-product-if-exists, vendor/google_devices/husky/proprietary/husky-vendor.mk)
+$(call inherit-product-if-exists, vendor/google_devices/cheetah/proprietary/cheetah/device-vendor-cheetah.mk)
+$(call inherit-product-if-exists, vendor/google_devices/cheetah/proprietary/cheetah-vendor.mk)
 
-#include device/google/shusky-sepolicy/husky-sepolicy.mk
+#include device/google/scheetah-sepolicy/cheetah-sepolicy.mk
 #include device/google/zuma-sepolicy/zuma-sepolicy.mk
 include hardware/google/pixel/vibrator/cs40l26/device.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
@@ -48,16 +48,16 @@ PRODUCT_PACKAGES += \
 
 # Init files
 PRODUCT_COPY_FILES += \
-device/google/husky/init.husky.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.husky.rc
+device/google/cheetah/init.cheetah.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.cheetah.rc
 
 # Init files
 PRODUCT_COPY_FILES += \
-	device/google/husky/recovery/root/init.recovery.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.recovery.usb.rc \
-	device/google/husky/recovery/root/vendor/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
+	device/google/cheetah/recovery/root/init.recovery.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.recovery.usb.rc \
+	device/google/cheetah/recovery/root/vendor/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
 
 # Device Manifest file
 DEVICE_MANIFEST_FILE := \
-device/google/husky/manifest.xml
+device/google/cheetah/manifest.xml
 
 #SHIPPING API
 PRODUCT_SHIPPING_API_LEVEL := 32
@@ -125,9 +125,9 @@ PRODUCT_PACKAGES += \
 
 # Display Config
 PRODUCT_COPY_FILES += \
-        device/google/husky/display_colordata_dev_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_colordata_dev_cal0.pb \
-        device/google/husky/display_golden_google-hk3_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_golden_google-hk3_cal0.pb \
-        device/google/husky/display_golden_external_display_cal2.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_golden_external_display_cal2.pb
+        device/google/cheetah/display_colordata_dev_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_colordata_dev_cal0.pb \
+        device/google/cheetah/display_golden_google-hk3_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_golden_google-hk3_cal0.pb \
+        device/google/cheetah/display_golden_external_display_cal2.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_golden_external_display_cal2.pb
 
 # Display
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
@@ -161,7 +161,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.0.brightness.acl.default=0
 
 # display color data
 PRODUCT_COPY_FILES += \
-	device/google/husky/panel_config_google-hk3_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/panel_config_google-hk3_cal0.pb
+	device/google/cheetah/panel_config_google-hk3_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/panel_config_google-hk3_cal0.pb
 
 # Touch
 PRODUCT_COPY_FILES += \
@@ -200,12 +200,12 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Power HAL config
 PRODUCT_COPY_FILES += \
-	device/google/husky/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+	device/google/cheetah/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # PowerStats HAL
 PRODUCT_SOONG_NAMESPACES += \
-    device/google/husky/powerstats \
-    device/google/husky
+    device/google/cheetah/powerstats \
+    device/google/cheetah
 
 # Identity credential
 PRODUCT_PACKAGES += \
