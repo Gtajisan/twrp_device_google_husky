@@ -5,6 +5,8 @@ git clone https://android.googlesource.com/device/google/pantah-kernel
 # hardware 
 git clone https://github.com/LineageOS/android_hardware_google_pixel.git -b lineage-21.0 hardware/google/pixel
 
+# gs201
+git clone https://github.com/austineyoung2000/android_device_google_gs201.git -b lineage-21.0 device/google/gs201
 
 export TARGET_ARCH="arm64-v8a"
 
