@@ -7,7 +7,7 @@
 
 soong_namespace {
 	imports: [
-		"device/google/husky/bootctrl",
-		"device/google/husky/gpt-utils",
+		"device/google/cheetah/bootctrl",
+		"device/google/cheetah/gpt-utils",
 	],
 }
