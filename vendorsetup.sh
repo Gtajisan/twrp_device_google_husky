@@ -4,8 +4,6 @@ git clone https://android.googlesource.com/platform/hardware/google/interfaces
 git clone https://android.googlesource.com/device/google/pantah-kernel
 
 
-
-
 export TARGET_ARCH="arm64-v8a"
 
 # Some about us
@@ -13,11 +11,11 @@ export FOX_VERSION="R11.1"
 export OF_MAINTAINER=FARHAN_MUH_TASIM
 
 # Build environment stuffs
-export FOX_BUILD_DEVICE="Pixel8Pro"
+export FOX_BUILD_DEVICE="Pixel7Pro"
 export ALLOW_MISSING_DEPENDENCIES=true
 export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
-export TARGET_DEVICE_ALT="Pixel8Pro, GooglePixel8Pro, husky, Husky"
-export FOX_TARGET_DEVICES="Pixel8Pro, GooglePixel8Pro, husky, Husky"
+export TARGET_DEVICE_ALT="Pixel7Pro, GooglePixel7Pro, cheetah, cheetah"
+export FOX_TARGET_DEVICES="Pixel7Pro, GooglePixel7Pro, cheetah, cheetah"
 export BUILD_USERNAME="nobody"
 export BUILD_HOSTNAME="android-build"
 
