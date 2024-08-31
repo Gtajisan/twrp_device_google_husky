@@ -1,8 +1,16 @@
+# tree clone 
+git clone https://android.googlesource.com/platform/hardware/google/interfaces
+# yet another 
+git clone https://android.googlesource.com/device/google/pantah-kernel
+
+
+
+
 export TARGET_ARCH="arm64-v8a"
 
 # Some about us
 export FOX_VERSION="R11.1"
-export OF_MAINTAINER=GamerBoy1234
+export OF_MAINTAINER=FARHAN_MUH_TASIM
 
 # Build environment stuffs
 export FOX_BUILD_DEVICE="Pixel8Pro"
