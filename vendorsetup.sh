@@ -2,6 +2,8 @@
 git clone https://android.googlesource.com/platform/hardware/google/interfaces
 # yet another 
 git clone https://android.googlesource.com/device/google/pantah-kernel
+# hardware 
+git clone https://github.com/LineageOS/android_hardware_google_pixel.git -b lineage-21.0 hardware/google/pixel
 
 
 export TARGET_ARCH="arm64-v8a"
