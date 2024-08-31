@@ -1,12 +1,13 @@
-# Husky specific init.rc
+# cheetah
+specific init.rc
 import /vendor/etc/init/hw/init.zuma.rc
 
 on early-boot
     # Wait for insmod_sh to finish all common modules
     wait_for_prop vendor.common.modules.ready 1
-    start insmod_sh_husky
+    start insmod_sh_cheetah
 
-service insmod_sh_husky /vendor/bin/insmod.sh /vendor/etc/init.insmod.husky.cfg
+service insmod_sh_cheetah /vendor/bin/insmod.sh /vendor/etc/init.insmod.cheetah.cfg
     class main
     user root
     group root system
