@@ -5,13 +5,13 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/google/husky
+DEVICE_PATH := device/google/cheetah
 
 include device/google/zuma/BoardConfig-common.mk
-include vendor/google_devices/husky/BoardConfigVendor.mk
+include vendor/google_devices/cheetah/BoardConfigVendor.mk
 
-TARGET_BOARD_INFO_FILE := device/google/husky/board-info.txt
-TARGET_BOOTLOADER_BOARD_NAME := husky
+TARGET_BOARD_INFO_FILE := device/google/cheetah/board-info.txt
+TARGET_BOOTLOADER_BOARD_NAME := cheetah
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -41,8 +41,8 @@ TARGET_SOC := zuma
 TARGET_SOC_NAME := google
 
 USES_DEVICE_GOOGLE_ZUMA := true
-USES_DEVICE_GOOGLE_HUSKY := true
-USES_DEVICE_GOOGLE_SHUSKY := true
+USES_DEVICE_GOOGLE_cheetah := true
+USES_DEVICE_GOOGLE_Scheetah := true
 
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a
@@ -54,7 +54,7 @@ TARGET_CPU_VARIANT_RUNTIME := cortex-a55
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := husky
+TARGET_BOOTLOADER_BOARD_NAME := cheetah
 TARGET_NO_BOOTLOADER := true
 
 # Display
