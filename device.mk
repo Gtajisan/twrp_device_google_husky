@@ -7,7 +7,7 @@
 LOCAL_PATH := device/google/cheetah
 DEVICE_PATH := device/google/cheetah
 
-TARGET_BOARD_KERNEL_HEADERS := device/google/scheetah-kernel/kernel-headers
+TARGET_BOARD_KERNEL_HEADERS := device/google/pantah-kernel/kernel-headers
 
 # Inherit from common AOSP config
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
@@ -29,7 +29,7 @@ $(call inherit-product-if-exists, vendor/google_devices/gs201/proprietary/device
 $(call inherit-product-if-exists, vendor/google_devices/cheetah/proprietary/cheetah/device-vendor-cheetah.mk)
 $(call inherit-product-if-exists, vendor/google_devices/cheetah/proprietary/cheetah-vendor.mk)
 
-#include device/google/scheetah-sepolicy/cheetah-sepolicy.mk
+#include device/google/pantah-sepolicy/cheetah-sepolicy.mk
 #include device/google/gs201-sepolicy/gs201-sepolicy.mk
 
 PRODUCT_COPY_FILES += \
