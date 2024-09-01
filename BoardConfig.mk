@@ -7,7 +7,7 @@
 
 DEVICE_PATH := device/google/cheetah
 
-include device/google/zuma/BoardConfig-common.mk
+include device/google/gs201/BoardConfig-common.mk
 include vendor/google_devices/cheetah/BoardConfigVendor.mk
 
 TARGET_BOARD_INFO_FILE := device/google/cheetah/board-info.txt
@@ -36,13 +36,12 @@ AB_OTA_PARTITIONS += \
     boot
 
 # Architecture
-TARGET_SOC := zuma
+TARGET_SOC := gs201
 
 TARGET_SOC_NAME := google
 
-USES_DEVICE_GOOGLE_ZUMA := true
+USES_DEVICE_GOOGLE_GS201 := true
 USES_DEVICE_GOOGLE_cheetah := true
-USES_DEVICE_GOOGLE_Scheetah := true
 
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a
@@ -72,8 +71,8 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_KERNEL_IMAGE_NAME := Image
-TARGET_KERNEL_CONFIG := zuma_defconfig
-TARGET_KERNEL_SOURCE := kernel/google/zuma/private/soc/gs
+TARGET_KERNEL_CONFIG := gs201_defconfig
+TARGET_KERNEL_SOURCE := kernel/google/gs201/private/soc/gs
 
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
@@ -132,8 +131,8 @@ BOARD_USES_GENERIC_KERNEL_IMAGE := true
 BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_IMAGE_NAME := Image.lz4
-TARGET_KERNEL_CONFIG := zuma_defconfig
-TARGET_KERNEL_SOURCE := kernel/google/zuma/private/soc/gs
+TARGET_KERNEL_CONFIG := gs201_defconfig
+TARGET_KERNEL_SOURCE := kernel/google/gs201/private/soc/gs
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image
 BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilt/dtbs
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
@@ -147,10 +146,10 @@ BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --vendor_cmdline $(VENDOR_CMDLINE)
 
 # Platform
-TARGET_BOARD_PLATFORM := zuma
+TARGET_BOARD_PLATFORM := gs201
 
 # Colour fix stuff
-TARGET_RECOVERY_PIXEL_FORMAT := ABGR_8888
+TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 165
 TARGET_RECOVERY_UI_LIB := \
 	librecovery_ui_pixel \
@@ -166,7 +165,7 @@ HWC_SUPPORT_COLOR_TRANSFORM := true
 BOARD_USES_EXYNOS_AFBC_FEATURE := true
 #BOARD_USES_HDRUI_GLES_CONVERSION := true
 
-BOARD_LIBACRYL_DEFAULT_COMPOSITOR := fimg2d_zuma
+BOARD_LIBACRYL_DEFAULT_COMPOSITOR := fimg2d_gs201
 BOARD_LIBACRYL_G2D_HDR_PLUGIN := libacryl_hdr_plugin
 
 # HWCServices
