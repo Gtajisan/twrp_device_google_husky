@@ -24,21 +24,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 $(call inherit-product-if-exists, vendor/google_devices/cheetah/prebuilts/device-vendor-cheetah.mk)
-$(call inherit-product-if-exists, vendor/google_devices/zuma/prebuilts/device-vendor.mk)
-$(call inherit-product-if-exists, vendor/google_devices/zuma/proprietary/device-vendor.mk)
+$(call inherit-product-if-exists, vendor/google_devices/gs201/prebuilts/device-vendor.mk)
+$(call inherit-product-if-exists, vendor/google_devices/gs201/proprietary/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/cheetah/proprietary/cheetah/device-vendor-cheetah.mk)
 $(call inherit-product-if-exists, vendor/google_devices/cheetah/proprietary/cheetah-vendor.mk)
 
 #include device/google/scheetah-sepolicy/cheetah-sepolicy.mk
-#include device/google/zuma-sepolicy/zuma-sepolicy.mk
-include hardware/google/pixel/vibrator/cs40l26/device.mk
-include device/google/gs-common/bcmbt/bluetooth.mk
-include device/google/gs-common/touch/stm/stm20.mk
-include device/google/gs-common/touch/gti/gti.mk
-include device/google/gs-common/touch/touchinspector/touchinspector.mk
+#include device/google/gs201-sepolicy/gs201-sepolicy.mk
 
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/recovery/root/fstab.zuma:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/system/etc/fstab.zuma
+    $(DEVICE_PATH)/recovery/root/fstab.gs201:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/system/etc/fstab.gs201
 
 PRODUCT_PACKAGES += \
     linker.vendor_ramdisk \
@@ -64,7 +59,7 @@ PRODUCT_SHIPPING_API_LEVEL := 32
 PRODUCT_TARGET_VNDK_VERSION := 32
 
 # define hardware platform
-PRODUCT_PLATFORM := zuma
+PRODUCT_PLATFORM := gs201
 
 # A/B OTA
 AB_OTA_UPDATER := true
@@ -101,8 +96,8 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-service
 
 PRODUCT_PACKAGES += \
-    bootctrl.zuma \
-    bootctrl.zuma.recovery
+    bootctrl.gs201 \
+    bootctrl.gs201.recovery
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -273,7 +268,7 @@ PRODUCT_PACKAGES += \
 
 # Shell scripts
 PRODUCT_COPY_FILES += \
-	device/google/zuma/disable_contaminant_detection.sh:$(TARGET_COPY_OUT_VENDOR)/bin/hw/disable_contaminant_detection.sh
+	device/google/gs201/disable_contaminant_detection.sh:$(TARGET_COPY_OUT_VENDOR)/bin/hw/disable_contaminant_detection.sh
 
 # PowerStats HAL
 PRODUCT_PACKAGES += \
@@ -322,7 +317,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.wcg_composition_dataspa
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.sys.sf.native_mode=2
 
-$(call soong_config_set,google_displaycolor,displaycolor_platform,zuma)
+$(call soong_config_set,google_displaycolor,displaycolor_platform,gs201)
 PRODUCT_PACKAGES += \
 	android.hardware.composer.hwc3-service.pixel \
 	libdisplaycolor \
@@ -333,7 +328,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 	persist.sys.fuse.passthrough.enable=true
 
 # Touch service
-include device/google/gs-common/touch/twoshay/aidl_zuma.mk
+include device/google/gs-common/touch/twoshay/aidl_gs101.mk
 
 # Build libion
 PRODUCT_PACKAGES += \
